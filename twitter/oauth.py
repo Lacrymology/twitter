@@ -33,7 +33,7 @@ code it all goes like this::
         oauth_token, oauth_token_secret, CONSUMER_KEY, CONSUMER_SECRET))
 
     # Now work with Twitter
-    twitter.statuses.update('Hello, world!')
+    twitter.statuses.update(status='Hello, world!')
 
 """
 
@@ -130,5 +130,5 @@ def urlencode_noplus(query):
             new_query.append((k, v))
         query = new_query
         return urlencode(query).replace("+", "%20")
-        
+
     return urlencode(query, safe='~').replace("+", "%20")
